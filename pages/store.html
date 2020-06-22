@@ -6,15 +6,13 @@
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <meta name="author" content="tusslife">
 
-      <meta name="title" content="Tusslife ph">
-      <title>Tusslife PH</title>
-      <meta name="description" content="Culture. Art. Life.">
+      <title>Store | TUSS</title>
 
       <!-- add icon link-->
-      <link rel="shortcut icon" href="./img/favicon.ico">
+      <link rel="shortcut icon" href="../img/favicon.ico">
 
       <!-- stylesheet -->
-      <link rel="stylesheet" href="./css/style-inverted.css">
+      <link rel="stylesheet" href="../css/style-inverted.css">
 
       <!-- bootstrap cdns -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -24,56 +22,44 @@
       <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
 
       <!-- terminal effect -->
-      <script src="./js/t.min.js"></script>
+      <script src="../js/t.min.js"></script>
 
       <!-- for on scroll animations -->
-      <link rel="stylesheet" href="./css/animate.css">
-      <script src="./js/wow.min.js"></script>
+      <link rel="stylesheet" href="../css/animate.css">
+      <script src="../js/wow.min.js"></script>
 
 </head>
-
 <body>
       <div class="wrapper">
 
-            <!-- navbar starts here -->
+            <!--------------- navbar starts here --------------->
             <nav>
-                  <span id="brand">
-                      <a href="index.html"><img src="img/tuss.png" alt="TUSS"></a>
-                  </span>
-  
-                  <ul id="menu">
-                      <li><a href="index.html">home<span>.</span></a></li>
-                      <li><a href="pages/store.html">store<span>.</span></a></li>
-                  </ul>
-  
-                  <div id="toggle">
-                      <div class="span">menu</div>
-                  </div>
-  
-            </nav>
-  
-            <div id="resize">
-                  <div class="close-btn">close</div>
-  
-              <ul id="menu">
-                  <li><a href="index.html">home<span>.</span></a></li>
-                  <li><a href="pages/store.html">store<span>.</span></a></li>
-              </ul>
-          </div>
-              <!-- navbar ends here -->
+                <span id="brand">
+                    <a href="../index.html"><img src="../img/tuss.png" alt="TUSS"></a>
+                </span>
 
-            <!-- hero section starts here -->
-            <div class="hero">
-                  <div class="header">
-                        <h1 class="animated-text line anim-typewriter">Coming Soon!</h1>
-                  </div>
-            </div>
+                <ul id="menu">
+                    <li><a href="../index.html">home<span>.</span></a></li>
+                    <li><a href="../pages/store.html">store<span>.</span></a></li>
+                </ul>
 
-            <div class="scroll-down"></div>
-            <div class="scroll-down-r"></div>
-            <div class="scroll-down-b"></div>
-            <div class="scroll-down-g"></div>
-            <!-- hero section ends here -->
+                <div id="toggle">
+                    <div class="span">menu</div>
+                </div>
+
+          </nav>
+
+          <div id="resize">
+                <div class="close-btn">close</div>
+
+            <ul id="menu">
+                <li><a href="../index.html">home<span>.</span></a></li>
+                <li><a href="../pages/store.html">store<span>.</span></a></li>
+            </ul>
+        </div>
+
+            <!--------------- navbar ends here --------------->
+
             <hr>
             <!-- footer starts here -->
             <div class="footer">
@@ -101,7 +87,7 @@
 
                                     <div class="col-lg-4" id="address">
                                           <p class="wow fadeInUp" data-wow-delay="0s">say hello</p>
-                                          <h4 class="wow fadeInUp" data-wow-delay="0.2s">tuss.info@gmail.com</h4>
+                                          <h4 class="wow fadeInUp" data-wow-delay="0.2s">official@tusslife.com</h4>
                                           <br><br>
                                     </div>
                               </div>
@@ -118,15 +104,30 @@
       <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
       
       <script>
-      // nav animation
-      TweenMax.from("#brand", 1, {
-            delay: 0.4,
-            y: 10,
-            opacity: 0,
-            ease: Expo.easeInOut
-      })
-      // nav animation ends
-      new WOW().init();
+        $("#toggle").click(function() {
+                $(this).toggleClass('on');
+                $("#resize").toggleClass("active");
+        });
+
+        $("#resize ul li a").click(function() {
+                $(this).toggleClass('on');
+                $("#resize").toggleClass("active");
+        });
+
+        $(".close-btn").click(function() {
+                $(this).toggleClass('on');
+                $("#resize").toggleClass("active");
+        });
+
+        // nav animation
+        TweenMax.from("#brand", 1, {
+                delay: 0.4,
+                y: 10,
+                opacity: 0,
+                ease: Expo.easeInOut
+        })
+        // nav animation ends
+        new WOW().init();
       </script>
 
       <!-- The core Firebase JS SDK is always required and must be listed first -->
