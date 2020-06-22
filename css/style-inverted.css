@@ -1,5 +1,5 @@
 
-/*-- basic styling -- */
+/*--------------- basic styling --------------- */
 html, body {
       margin: 0;
       padding: 0;
@@ -11,7 +11,18 @@ html, body {
       text-shadow: 0px -1px royalblue,-1px 0px red,1px 0px green;
 }
 
-/*-- typewriter effect -- */
+.whitespace {
+      width: 100%;
+      height: 100px;
+}
+
+@media(max-width: 768px) {
+      .whitespace {
+            display: none;
+      }
+}
+
+/*--------------- typewriter effect --------------- */
 .line {
       width: 24em;
       top: 50%;
@@ -33,7 +44,7 @@ html, body {
             width: 0;
       }
       to {
-            width: 7.4em;
+            width: 11em;
       }
 }
 
@@ -43,7 +54,7 @@ html, body {
                   width: 0;
             }
             to {
-                  width: 7.5em;
+                  width: 10em;
             }
       }
 }
@@ -57,7 +68,7 @@ html, body {
       }
 }
 
-/*-- navigation -- */
+/*--------------- navigation --------------- */
 nav {
       width: 100%;
       background: #fff;
@@ -228,7 +239,7 @@ nav #menu li a:hover {
       }
 }
 
-/*-- hero section -- */
+/*--------------- hero section --------------- */
 .hero {
       height: 100vh;
       display: flex;
@@ -239,22 +250,21 @@ nav #menu li a:hover {
 .hero h1 {
       font-weight: lighter;
       text-align: center;
-      letter-spacing: 0px;
-      font-size: 40px;
-      line-height: 60px;
+      letter-spacing: -2px;
+      line-height: 58px;
 }
 
 .header{
-      text-shadow: 0px 2px rgb(0, 0, 255),2px 0px rgb(255, 0, 0),2px 2px rgb(0, 255, 0);
+      text-shadow: 0px 2px royalblue,2px 0px red,2px 2px green;
 }
 
 @media(max-width: 768px) {
       .header h1 {
-            font-size: 32px;
+            font-size: 26px;
       }
 }
 
-/*-- scroll down icon animation -- */
+/*--------------- scroll down icon animation --------------- */
 .scroll-down {
       position: absolute;
       left: 50%;
@@ -334,7 +344,118 @@ nav #menu li a:hover {
             opacity: 0;
       }
 }
-/*-- footer section -- */
+
+/*--------------- shirts section --------------- */
+h6 {
+      text-align: center;
+}
+
+.vertical {
+      margin-top: 40px;
+      border-left: 1px solid #0f0f0f;
+      height: 80px;
+      position: absolute;
+      left: 50%;
+}
+
+
+@media(max-width: 768px) {
+      .shirt {
+            width: 90% !important;
+            margin: 14px auto;
+      }
+
+      .vertical {
+            display: none;
+      }
+
+      .shirt1::after, .shirt2::after, .shirt3::after, .shirt4::after {
+            display: none;
+      }
+}
+
+/*--------------- content section --------------- */
+h6 {
+      text-align: center;
+}
+
+.vertical {
+      margin-top: 40px;
+      border-left: 1px solid #0f0f0f;
+      height: 80px;
+      position: absolute;
+      left: 50%;
+}
+
+.content1::after {
+      content: "Marcus Aurelius.";
+      font-family: "Roboto Mono";
+      font-size: 36px;
+      position: relative;
+      color: #0f0f0f;
+      display: block;
+      top: -50%;
+      left: -70%;
+      right: 0;
+      bottom: 0;
+}
+
+.content2::after {
+      content: "Niel Degrasse Tyson.";
+      font-family: "Roboto Mono";
+      font-size: 36px;
+      position: relative;
+      color: #0f0f0f;
+      display: block;
+      top: -50%;
+      left: 105%;
+      right: 0;
+      bottom: 0;
+}
+
+.content3::after {
+      content: "William Stukeley.";
+      font-family: "Roboto Mono";
+      font-size: 36px;
+      position: relative;
+      color: #0f0f0f;
+      display: block;
+      top: -80%;
+      left: -50%;
+      right: 0;
+      bottom: 0;
+}
+
+.content4::after {
+      content: "Friedriech Nietzsche.";
+      font-family: "Roboto Mono";
+      font-size: 36px;
+      position: relative;
+      color: #0f0f0f;
+      display: block;
+      top: 10%;
+      left: 90%;
+      right: 0;
+      bottom: 0;
+}
+
+@media(max-width: 768px) {
+      .shirt {
+            width: 90% !important;
+            margin: 14px auto;
+      }
+
+      .vertical {
+            display: none;
+      }
+
+      .content1::after, .content2::after, .content3::after, .content4::after {
+            display: none;
+      }
+}
+
+
+/*--------------- footer section --------------- */
 .collab {
       text-align: right;
 }
@@ -350,7 +471,7 @@ nav #menu li a:hover {
 }
 
 .info h4 {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: lighter;
 }
 
@@ -361,8 +482,8 @@ nav #menu li a:hover {
 
 .info li {
       font-weight: lighter;
-      color: #dfb3b3;
-      font-size: 20px;
+      color: #0f0f0f;
+      font-size: 18px;
       padding-left: 20px;
 }
 
@@ -388,25 +509,37 @@ nav #menu li a:hover {
 }
 
 
+#tw::before {
+      display: inline-block;
+      content: '';
+      border-radius: 100%;
+      height: 4px;
+      width: 4px;
+      margin-right: 6px;
+      background: #55acee;
+}
+
+
+#yt::before {
+      display: inline-block;
+      content: '';
+      border-radius: 100%;
+      height: 4px;
+      width: 4px;
+      margin-right: 6px;
+      background: #c4302b;
+}
+
 #media, #address {
       text-align: right;
 }
-#media{
-      text-align: center;
-}
+
 #media ul {
       list-style: none;
-      padding: 0;
 }
 
 #media ul li {
       display: inline-block;
-      text-decoration: none;
-}
-#media ul li a{
-      
-      text-decoration: none;
-      color: #0f0f0f;
 }
 
 @media(max-width: 768px) {
@@ -418,13 +551,356 @@ nav #menu li a:hover {
             margin: 0 0 0 -22px;
             padding: 0;
       }
+}
 
-      .space{
-            display: none;
+/*--------------- work page --------------- */
+
+.hero-content {
+      margin-left: 0%;
+}
+
+.hero-content p {
+      font-weight: 300;
+      line-height: 36px;
+      color: grey;
+}
+
+.hero-content h6 {
+      text-align: left;
+}
+
+@media(max-width: 768px) {
+      .hero-content {
+            padding-top: 50px;
+            width: 96%;
+            margin: 0 auto;
       }
 }
 
-.about_img{
+/*---------------about page --------------- */
+
+.about {
+      height: 500px;
+      margin-top: 120px;
+}
+
+/*--------------- contact form --------------- */
+
+#contact-form {
+      margin: 5% 1.4%;
+}
+
+#contact-form ul {
+      list-style: none;
+      border-radius: 5px;
+      margin-bottom: 40px;
+}
+
+#contact-form li {
+      padding: 10px;
+}
+
+#contact-form li:last-of-type {
+      border-bottom: none;
+}
+
+#contact-form label {
+      display: block;
+      font-size: .8em;
+      color: #999;
+      padding-left: 5px;
+}
+
+#contact-form input, #contact-form textarea {
+      width: 100%;
+      padding: 5px;
+      border: none;
+      resize: vertical;
+      background: transparent;
+      color: #fff;
+      font-weight: bolder;
+}
+
+input:focus {
+      outline: none;
+      border: none;
+}
+
+textarea:focus {
+      outline: none;
+      border: none;
+}
+
+.textarea {
+      border-bottom: 1px solid #dfdfdf;
+}
+
+.send {
+      margin-left: 50px;
+      text-transform: uppercase;
+      padding: 20px 30px;
+      background: transparent;
+      color: #dfdfdf;
+      font-size: 14px;
+      letter-spacing: 2px;
+}
+
+.send:hover {
+      background: #dfdfdf;
+      color: #101010;
+}
+
+@media(max-width: 768px) {
+      #contact-form {
+            margin: 5% -8%;
+            width: 98%;
+      }
+}
+
+/*--------------- project page --------------- */
+
+.prev, .next p {
+      color: grey;
+}
+
+.prev p {
+      text-align: left;
+}
+
+.next p {
+      text-align: right;
+}
+
+/*------------------added-----------------------*/
+/*--drop down menu--*/
+    
+    .menu-dropdown .dropbtn {
+      border: none;
+      outline: none;
+      color: black;
+      background-color: inherit;
+      margin: 0;
+    }
+
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      min-width: auto;
+      box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+    }
+    
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 0px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .menu-dropdown:hover, .menu-dropdown .dropbtn:hover{
+      cursor: default;
+    }
+    .dropdown-content a:hover {
+      background-color: #f9f9f9;
+    }
+    
+    .menu-dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+/*---facebook-reponsive---*/
+  @media(max-width: 768px) {
+      .facebook-responsive {
+            overflow:hidden;
+            padding-bottom:56.25%;
+            position:relative;
+            height:0;
+      }
+        
+      .facebook-responsive iframe {
+            left:0;
+            top:0;
+            height:100%;
+            width:100%;
+            position:absolute;
+      }
+}
+
+.shirt_img, .shirt_img_ind, .content_img, .partner_logo, .about_img{
       max-width: 100%;
       height: auto;
+}
+
+
+.content_mob{
+      visibility: hidden;
+}
+
+@media(max-width: 768px){
+      .content-full{
+            visibility: hidden;
+      }
+      .content_mob{
+            visibility: visible;
+      }
+      .partner_logo{
+            width: 50%;
+      }
+}
+
+    
+.dropbtn{
+      background-color: transparent;
+      border: none;
+
+}
+.dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      min-width: auto;
+      box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+}
+    
+.dropdown-content a:hover {
+      background-color: rgb(252, 252, 252);
+}
+
+.dropdown:hover .dropdown-content {
+      display: block;
+}
+    
+.read-more, .view-more{
+      text-decoration: none;
+      text-align: center;
+}
+.read-more-btn, .view-more-btn{
+      color: black;
+      padding: 8px;
+      cursor: pointer;
+      font-weight: 300;
+      line-height: 80px;
+      transition: all 0.1s ease-out;
+      border: 2px solid rgba(0,0,0,0.2);
+      text-shadow: 0px -1px royalblue,-1px 0px red,1px 0px green;
+}
+
+.read-more-btn:hover, .view-more-btn:hover{
+      text-decoration: none;
+      color: black;
+      padding: 12px;
+      cursor: pointer;
+      font-weight: 300;
+      line-height: 80px;
+      transition: all 0.1s ease-out;
+      border: 2px solid rgba(0, 0, 0, 0.6);
+      text-shadow: 0px -1px royalblue,-1px 0px red,1px 0px green;
+}
+
+/*----breadcrumbs----*/
+ul.breadcrumb {
+      padding: 4px 0px;
+      list-style: none;
+      background-color: transparent;
+      font-weight: lighter;
+}
+
+ul.breadcrumb a{
+      color: black;
+}
+ul.breadcrumb li {
+      display: inline;
+      font-size: 16px;
+}
+ul.breadcrumb li+li:before {
+      padding: 8px;
+      color: black;
+      content: "/\00a0";
+}
+
+ul.breadcrumb li a:hover {
+      color: black;
+      text-decoration: underline;
+}
+
+@media(min-width: 768px) {
+      .shirt1 h6, .shirt2 h6, .shirt3 h6, .shirt4 h6 {
+            visibility: hidden;
+      }      
+}
+.shirt1 a, .shirt2 a, .shirt3 a, .shirt4 a {
+      color: black;
+}
+
+.info p{
+      color: black;
+      font-weight: lighter;
+}
+
+#shirt_img_ebony{
+      position: relative;
+      float: right;
+}
+
+.shirt-details-1{
+      text-align: right;
+}
+.shirt-details-2{
+      text-align: left;
+}
+
+.vertical-center {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(50%);
+      transform: translateY(50%);
+}
+
+.vertical-center button{
+      background-color: rgba(0, 0, 0); /* Green */
+      color: white;
+      padding: 8px 8px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      transition-duration: 0.4s;
+}
+.vertical-center button:hover {
+      background-color: rgb(255, 255, 255); /* Green */
+      color: black;
+      padding: 10px 10px 10px 10px;
+}
+
+.mob-row{
+      text-align: center;
+}
+.mob-row h6{
+      background-color: rgba(0, 0, 0); /* Green */
+      color: white;
+      padding: 8px 8px;
+      text-decoration: none;
+      font-size: 16px;
+      transition-duration: 0.4s;
+}
+.mob-row h6:hover {
+      background-color: rgb(255, 255, 255); /* Green */
+      color: black;
+      padding: 10px 10px 10px 10px;
+}
+
+@media(max-width: 768px) {
+      .des-row ,.container-fluid-des{
+            display: none;
+      } 
+}
+@media(min-width: 768px) {
+      .mob-row, .container-fluid-mob{
+            display: none;
+      } 
 }
